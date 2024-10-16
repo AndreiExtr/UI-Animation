@@ -1,0 +1,33 @@
+.ripple {
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   background-color: rgb(80, 176, 255);
+   position: relative;
+
+ }
+
+ .ripple:before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border: 2px solid rgb(80, 200, 255);
+  animation: anim-ripple 2s infinite;
+}
+
+ @keyframes anim-ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale3d(1.25, 1.25, 1);
+  }
+}
